@@ -5,7 +5,7 @@ html {
 
 header {
     width:100%;
-    height:7vw;
+    height:5vw;
     background-color:#8e5b64;
     border-bottom:0.25vw solid black;
 }
@@ -13,24 +13,72 @@ header {
 #container {
     width:80%;
     margin-left:10%;
-    padding-top:2vw;
-    height:5vw;
+    padding-top:1.5vw;
+    height:3.5vw;
     background-color:#fac9b8;
     border:0.25vw solid black;
+    border-top:none;
 }
 
 h1 {
     font-family: 'Roboto Slab', serif;
     text-align:center;
-    font-size:3vw;
+    font-size:2vw;
 
 }
 
 #bodyContainer {
     width:80%;
     margin-left:10%;
-    margin-top:2vw;
-    height:30vw;
+    margin-top:1vw;
+    height:38vw;
     background-color:#f9dbbd;
     border:0.25vw solid black;
+}
+
+#mainimage,
+#title,
+#question,
+.answer {
+    border:0.25vw solid black;
+
+}
+
+#title {
+    font-size:3vw;
+    width:20%;
+    text-align:center;
+    margin-left:40%;
+    margin-top:1vw;
+    background-color:#335c67;
+}
+
+#mainimage {
+    float:right;
+    width:40%;    
+    margin:2vw 1.5vw;
+    height:auto;
+    max-height:25vw;
+}
+
+#question {
+    font-size:2vw;
+    margin:2vw 1vw 0 1.5vw;
+    padding:0.5vw;
+    padding-left:2vw;
+    width:50%;
+    float:left;
+    background-color:#fac9b8;
+    text-align:center;
+}
+
+.answer {
+    margin-top:2vw;
+    margin-left:1.5vw;
+    padding:0.5vw;
+    padding-left:2vw;
+    font-size:2vw;
+    width:50%;
+    float:left;
+    background-color:#335c67;
 }
