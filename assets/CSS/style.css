@@ -44,16 +44,21 @@ header {
 #title,
 #timer {
     font-size:4vw;
-    width:30%;
-    text-align:center;
-    margin-left:12%;
+    text-align:center;    
     margin-top:1vw;
-    background-color:#335c67;
+    background-color:#335c67;    
+}
+
+#title {
+    width:30%;
+    margin-left:12%;
     float:left;
 }
 
 #timer {
-    margin-left:21%;
+    margin-right:12.5%;
+    width:15%;
+    float:right;
 }
 
 #mainimage {
