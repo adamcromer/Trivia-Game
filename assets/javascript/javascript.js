@@ -20,10 +20,10 @@ $(document).ready(function () {
         images = []
     }
     var question4 = {        
-        question="What word is said the most throughout the film?",
-        answers=["Dude", "Man", "The F Word", "Bowling"],
+        question = "What word is said the most throughout the film?",
+        answers = ["Dude", "Man", "The F Word", "Bowling"],
         correctAnswer = 2,
-        images=[]
+        images = []
     }
     var question5 = { 
         question = "What band does The Dude hate?",
@@ -32,10 +32,10 @@ $(document).ready(function () {
         images = [""]
     }
     var question6 = {        
-        question="What is a nihilist?",
-        answers=["A person who believes that life is meaningless.", "A person who disbelieves the existence of God", "A person who believes that nothing is known or can be known of the existence of God.", "A person who believes in multiple Gods."],
-        correctAnswer=0,
-        images=[]
+        question = "What is a nihilist?",
+        answers = ["A person who believes that life is meaningless.", "A person who disbelieves the existence of God", "A person who believes that nothing is known or can be known of the existence of God.", "A person who believes in multiple Gods."],
+        correctAnswer = 0,
+        images = []
     }
     var question7 = {        
         question = "Who is present in every scene?",
@@ -44,10 +44,10 @@ $(document).ready(function () {
         images=[]
     }
     var question8 = {        
-        question="Why can't Walter answer his phone?",
-        answers=["He's observing Shabbos.", "He's in PTSD therapy.", "He forgot to pay his bill.", "He doesn't use a phone because he believes he's being tracked by the CIA."],
-        correctAnswer=0,
-        images=[]
+        question = "Why can't Walter answer his phone?",
+        answers = ["He's observing Shabbos.", "He's in PTSD therapy.", "He forgot to pay his phone bill.", "He doesn't use a phone because he believes he's being tracked by the CIA."],
+        correctAnswer = 0,
+        images = []
     }
     var question9 = {        
         question = "Jackie Treehorn treats objects like what according to The Dude?",
@@ -62,6 +62,6 @@ $(document).ready(function () {
         images=[]
     }
 
-    
+
     
 });
