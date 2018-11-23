@@ -32,7 +32,7 @@ header {
     border:0.25vw solid black;
 }
 
-#mainimage,
+#mainImage,
 #title,
 #question,
 #timer,
@@ -61,7 +61,7 @@ header {
     float:right;
 }
 
-#mainimage {
+#mainImage {
     float:right;
     width:38%;    
     margin:2vw 1.5vw 1vw 0;
@@ -87,6 +87,7 @@ header {
     padding-left:1vw;
     font-size:2vw;
     width:50%;
+    max-width:50%;
     float:left;
     background-color:#335c67;
 }

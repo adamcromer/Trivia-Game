@@ -60,7 +60,29 @@ $(document).ready(function () {
         answers = ['Jeffrey "The Dude" Lebowski', "Bunny Lebowski", "Maude Lebowski", 'Jeffrey "The Millionaire" Lebowski'],
         correctAnswer = 3,
         images=[]
-    }
+    }    
+
+    //Variables which connect with their $Counterparts.
+    // let title = $("#title");
+    // let timer = $("#timer");
+    // let mainImage = $("#mainImage");
+    // let question = $("#question");
+    // let answer1 = $("#answer1");
+    // let answer2 = $("#answer2");
+    // let answer3 = $("#answer3");
+    // let answer4 = $("#answer4");
+
+    //Variables for score and how many out of questions so far and other global variables.
+
+    //A function that updates the variables with the matching HTML.
+
+    //A function which starts the timer for 30 Seconds and what happens once the time runs out.
+
+    //A reset function so that you don't have to restart the page to play again.
+
+    //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
+
+
 
 
     
