@@ -78,6 +78,7 @@ header {
     float:left;
     background-color:#fac9b8;
     text-align:center;
+    /* position:fixed; */
 }
 
 .answer {
