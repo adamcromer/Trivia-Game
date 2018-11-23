@@ -36,20 +36,25 @@ header {
 #title,
 #question,
 #timer,
-.answer {
+.answer,
+#secondText,
+#startButton,
+#secondImage {
     border:0.25vw solid black;
 
 }
 
 #title,
-#timer {
+#timer,
+#startButton {
     font-size:4vw;
     text-align:center;    
     margin-top:1vw;
     background-color:#335c67;    
 }
 
-#title {
+#title,
+#startButton {
     width:30%;
     margin-left:12%;
     float:left;
@@ -61,7 +66,8 @@ header {
     float:right;
 }
 
-#mainImage {
+#mainImage,
+#secondImage { 
     float:right;
     width:38%;    
     margin:2vw 1.5vw 1vw 0;
@@ -69,7 +75,8 @@ header {
     max-height:25vw;
 }
 
-#question {
+#question,
+#secondText {
     font-size:2vw;
     margin:2vw 1vw 0 1.5vw;
     padding:0.5vw;
@@ -78,7 +85,6 @@ header {
     float:left;
     background-color:#fac9b8;
     text-align:center;
-    /* position:fixed; */
 }
 
 .answer {
@@ -91,4 +97,34 @@ header {
     max-width:50%;
     float:left;
     background-color:#335c67;
+    text-align:center;
 }
+
+#secondText {
+    margin-top:10vw;
+}
+
+#startButton {
+    margin-top: 2vw;
+}
+
+#startButton:hover {
+    background-color:#8e5b64;
+}
+
+.answer:hover {
+    background-color:#8e5b64;
+}
+
+#title,
+#question,
+.answer,
+#mainImage {
+    display:none;
+}
+
+/* #secondText,
+#startButton,
+#secondImage {
+    display:none;
+} */
