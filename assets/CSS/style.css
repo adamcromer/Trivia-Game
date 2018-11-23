@@ -26,7 +26,7 @@ header {
     width:80%;
     margin-left:10%;
     margin-top:1vw;
-    height:36vw;
+    height:37.5vw;
     background-color:#f9dbbd;
     border:0.25vw solid black;
 }
@@ -35,7 +35,7 @@ header {
 #title,
 #question,
 #timer,
-.answer,
+.answers,
 #secondText,
 #startButton,
 #secondImage {
@@ -86,8 +86,8 @@ header {
     text-align:center;
 }
 
-.answer {
-    margin-top:2vw;
+.answers {
+    margin-top:1vw;
     margin-left:1.5vw;
     padding:0.5vw;
     padding-left:1vw;
@@ -104,20 +104,20 @@ header {
 }
 
 #startButton {
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
 #startButton:hover {
     background-color:#D8D0C1;
 }
 
-.answer:hover {
+.answers:hover {
     background-color:#D8D0C1;
 }
 
 #title,
 #question,
-.answer,
+.answers,
 #mainImage {
     display:none;
 }
