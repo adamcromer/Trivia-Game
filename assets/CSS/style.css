@@ -1,23 +1,22 @@
 html {
-    background-color:#6f5655;    
+    background: url(../images/rug.jpg) no-repeat center center fixed;
+    background-size: cover;   
     font-family: 'Zilla Slab', serif;
 }
 
 header {
     width:100%;
     height:5vw;
-    background-color:#8e5b64;
-    border-bottom:0.25vw solid black;
 }
 
 #container {
     width:60%;
     margin-left:20%;
+    margin-top:0.5vw;
     padding-top:1vw;
     height:4vw;
     background-color:#fac9b8;
     border:0.25vw solid black;
-    border-top:none;
     font-family: 'Roboto Slab', serif;
     text-align:center;
     font-size:3vw;
@@ -27,7 +26,7 @@ header {
     width:80%;
     margin-left:10%;
     margin-top:1vw;
-    height:38vw;
+    height:36vw;
     background-color:#f9dbbd;
     border:0.25vw solid black;
 }
@@ -50,7 +49,7 @@ header {
     font-size:4vw;
     text-align:center;    
     margin-top:1vw;
-    background-color:#335c67;    
+    background-color:#8e5b64;    
 }
 
 #title,
@@ -96,7 +95,7 @@ header {
     width:50%;
     max-width:50%;
     float:left;
-    background-color:#335c67;
+    background-color:#8e5b64;
     text-align:center;
 }
 
@@ -109,11 +108,11 @@ header {
 }
 
 #startButton:hover {
-    background-color:#8e5b64;
+    background-color:#D8D0C1;
 }
 
 .answer:hover {
-    background-color:#8e5b64;
+    background-color:#D8D0C1;
 }
 
 #title,

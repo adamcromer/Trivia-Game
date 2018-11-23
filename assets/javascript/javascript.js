@@ -89,7 +89,8 @@ $(document).ready(function () {
 
     //A reset function so that you don't have to restart the page to play again.
     function reset() {
-
+        score = 0;
+        totalQuestions = 0;
     }
 
     //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
