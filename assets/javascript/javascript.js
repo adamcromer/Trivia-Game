@@ -78,14 +78,10 @@ $(document).ready(function () {
     var startButton = $("#startButton");
     var secondText = $("#secondText");
     var secondImage = $("#secondImage");
-    
-
-
 
     //Variables for score and how many out of questions so far and other global variables.
     var score = 0;
-    var totalQuestions = -1;
-    
+    var totalQuestions = -1;    
 
     //A function that updates the variables with the matching HTML.
     function updatePage() {
@@ -99,9 +95,17 @@ $(document).ready(function () {
         secondImage.attr("src", questionObject[totalQuestions].images[1]);
     }
 
-    //A function which starts the timer for 30 Seconds and what happens once the time runs out.
-    function timer() {
-
+    //A function for what happens once the time runs out.
+    function wrongAnswer() {
+        question.hide();
+        answers.hide();
+        mainImage.hide();
+        secondImage.show();
+        secondText.show();
+        startButton.show();
+        secondText.html("Sorry the correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ".");
+        console.log(questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer]);
+        startButton.html("Continue.");
     }
 
     //A reset function so that you don't have to restart the page to play again.
@@ -113,7 +117,7 @@ $(document).ready(function () {
 
     //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
     startButton.click(function () {
-        // startButton.hide();
+        startButton.hide();
         secondImage.hide();
         secondText.hide();
         title.show();
@@ -122,10 +126,7 @@ $(document).ready(function () {
         mainImage.show();
         totalQuestions++;
         updatePage();
-
+        wrongAnswer();
     });
-
-
-
 
 });
