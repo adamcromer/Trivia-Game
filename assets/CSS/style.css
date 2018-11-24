@@ -99,6 +99,10 @@ header {
     text-align:center;
 }
 
+#answer1 {
+    margin-top:1.5vw;
+}
+
 #secondText {
     margin-top:10vw;
 }
