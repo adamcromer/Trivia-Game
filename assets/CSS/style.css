@@ -95,7 +95,7 @@ header {
     width:50%;
     max-width:50%;
     float:left;
-    background-color:#8e5b64;
+    background-color:#D8D0C1;
     text-align:center;
 }
 
@@ -109,14 +109,15 @@ header {
 
 #startButton {
     margin-top: 1vw;
+    background-color:#D8D0C1;
 }
 
 #startButton:hover {
-    background-color:#D8D0C1;
+    background-color:#8e5b64;
 }
 
 .answers:hover {
-    background-color:#D8D0C1;
+    background-color:#8e5b64;
 }
 
 #title,

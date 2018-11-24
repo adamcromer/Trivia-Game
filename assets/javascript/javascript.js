@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     //A function that updates the variables with the matching HTML.
     function updatePage() {
-        question.html(questionObject[totalQuestions].question);
+        question.html(questionObject[totalQuestions].question); 
         answer1.html(questionObject[totalQuestions].answers[0]);
         answer2.html(questionObject[totalQuestions].answers[1]);
         answer3.html(questionObject[totalQuestions].answers[2]);
@@ -109,6 +109,7 @@ $(document).ready(function () {
         score = 0;
         totalQuestions = 0;
     }
+    console.log(totalQuestions);//?
 
     //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
     startButton.click(function () {
