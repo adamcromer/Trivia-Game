@@ -54,7 +54,7 @@ $(document).ready(function () {
         question9 = {
             question: "Jackie Treehorn treats objects like what according to The Dude?",
             answers: ["Books", "Dogs", "Food", "Women"],
-            correctAnswer: 0,
+            correctAnswer: 3,
             images: ["/assets/images/dream.jpg", "/assets/images/theduderelaxing.jpg"]
         },
         question10 = {
@@ -64,7 +64,7 @@ $(document).ready(function () {
             images: ["/assets/images/thedudeatbar.jpg", "/assets/images/brandtandthebig.jpg"]
         }
     ]
-    
+
     //Variables which connect with their $Counterparts.
     var title = $("#title");
     var timer = $("#timer");
@@ -81,11 +81,11 @@ $(document).ready(function () {
 
     //Variables for score and how many out of questions so far and other global variables.
     var score = 0;
-    var totalQuestions = -1;    
+    var totalQuestions = -1;
 
     //A function that updates the variables with the matching HTML.
     function updatePage() {
-        question.html(questionObject[totalQuestions].question); 
+        question.html(questionObject[totalQuestions].question);
         answer1.html(questionObject[totalQuestions].answers[0]);
         answer2.html(questionObject[totalQuestions].answers[1]);
         answer3.html(questionObject[totalQuestions].answers[2]);
@@ -97,20 +97,22 @@ $(document).ready(function () {
 
     //A function for what happens once the time runs out.
     function outOfTime() {
-        
+
         question.hide();
         answers.hide();
         mainImage.hide();
         secondImage.show();
         secondText.show();
         startButton.show();
-        secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ".");
-        startButton.html("Continue.");
+        secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right.");
+        startButton.html("Continue");
     }
 
     //A function for what happens once your select the right answer.
     function rightAnswer() {
-        score++
+        clearTimeout(outOfTime);
+        console.log("clearedTimeout");
+        score++;
         question.hide();
         answers.hide();
         mainImage.hide();
@@ -122,6 +124,7 @@ $(document).ready(function () {
     }
     //A function for what happens once your seletct the wrong answer.
     function wrongAnswer() {
+        
         question.hide();
         answers.hide();
         mainImage.hide();
@@ -136,21 +139,31 @@ $(document).ready(function () {
     //A reset function so that you don't have to restart the page to play again.
     function reset() {
         score = 0;
-        totalQuestions = 0;
+        totalQuestions = -1;
     }
     console.log(totalQuestions);//?
 
     //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
     startButton.click(function () {
-        startButton.hide();
-        secondImage.hide();
-        secondText.hide();
-        title.show();
-        question.show();
-        answers.show();
-        mainImage.show();
-        totalQuestions++;
-        updatePage();
+
+        if (totalQuestions < 9) {
+            setTimeout(outOfTime, 1000 * 30);
+            console.log("settimeout");
+            startButton.hide();
+            secondImage.hide();
+            secondText.hide();
+            title.show();
+            question.show();
+            answers.show();
+            mainImage.show();
+            totalQuestions++;
+            updatePage();
+        }
+        else {
+            secondText.html("Blah blah blah play again?");
+            startButton.html("Restart");
+            reset();
+        }
     });
 
     answer1.click(function () {
@@ -160,6 +173,8 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
+        clearTimeout(outOfTime);
+        console.log("clearedTimeout");
     })
 
     answer2.click(function () {
@@ -169,6 +184,8 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
+        clearTimeout(outOfTime);
+        console.log("clearedTimeout");
     })
 
     answer3.click(function () {
@@ -178,6 +195,8 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
+        clearTimeout(outOfTime);
+        console.log("clearedTimeout");
     })
 
     answer4.click(function () {
@@ -187,6 +206,9 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
+        clearTimeout(outOfTime);
+        console.log("clearedTimeout");
     })
+
 
 });
