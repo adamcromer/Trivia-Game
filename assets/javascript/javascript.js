@@ -96,6 +96,31 @@ $(document).ready(function () {
     }
 
     //A function for what happens once the time runs out.
+    function outOfTime() {
+        
+        question.hide();
+        answers.hide();
+        mainImage.hide();
+        secondImage.show();
+        secondText.show();
+        startButton.show();
+        secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ".");
+        startButton.html("Continue.");
+    }
+
+    //A function for what happens once your select the right answer.
+    function rightAnswer() {
+        score++
+        question.hide();
+        answers.hide();
+        mainImage.hide();
+        secondImage.show();
+        secondText.show();
+        startButton.show();
+        startButton.html("Continue");
+        secondText.html("Good job! You got the answer right. You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right!");
+    }
+    //A function for what happens once your seletct the wrong answer.
     function wrongAnswer() {
         question.hide();
         answers.hide();
@@ -103,9 +128,9 @@ $(document).ready(function () {
         secondImage.show();
         secondText.show();
         startButton.show();
-        secondText.html("Sorry the correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ".");
-        console.log(questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer]);
-        startButton.html("Continue.");
+        startButton.html("Continue");
+        secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right.");
+        console.log(totalQuestions);
     }
 
     //A reset function so that you don't have to restart the page to play again.
@@ -126,7 +151,42 @@ $(document).ready(function () {
         mainImage.show();
         totalQuestions++;
         updatePage();
-        wrongAnswer();
     });
+
+    answer1.click(function () {
+        if (questionObject[totalQuestions].correctAnswer === 0) {
+            rightAnswer();
+        }
+        else {
+            wrongAnswer();
+        }
+    })
+
+    answer2.click(function () {
+        if (questionObject[totalQuestions].correctAnswer === 1) {
+            rightAnswer();
+        }
+        else {
+            wrongAnswer();
+        }
+    })
+
+    answer3.click(function () {
+        if (questionObject[totalQuestions].correctAnswer === 2) {
+            rightAnswer();
+        }
+        else {
+            wrongAnswer();
+        }
+    })
+
+    answer4.click(function () {
+        if (questionObject[totalQuestions].correctAnswer === 3) {
+            rightAnswer();
+        }
+        else {
+            wrongAnswer();
+        }
+    })
 
 });
