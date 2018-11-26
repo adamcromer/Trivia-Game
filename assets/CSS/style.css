@@ -48,7 +48,7 @@ header {
 #startButton {
     font-size:4vw;
     text-align:center;    
-    margin-top:1vw;
+    margin-top:1.5vw;
     background-color:#8e5b64;    
 }
 
@@ -87,7 +87,7 @@ header {
 }
 
 .answers {
-    margin-top:1vw;
+    margin-top:1.5vw;
     margin-left:1.5vw;
     padding:0.5vw;
     padding-left:1vw;
@@ -100,7 +100,7 @@ header {
 }
 
 #answer1 {
-    margin-top:1.5vw;
+    margin-top:2vw;
 }
 
 #secondText {
@@ -108,7 +108,7 @@ header {
 }
 
 #startButton {
-    margin-top: 1vw;
+    margin-top: 2vw;
     background-color:#D8D0C1;
 }
 

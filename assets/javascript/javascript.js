@@ -17,8 +17,8 @@ $(document).ready(function () {
         },
         question3 = {
             question: "What is The Dude buying at the start of the movie with a check for $0.69?",
-            answers: ["Coffee", "Milk", "Half & Half", "A Coke"],
-            correctAnswer: 2,
+            answers: ["Coffee", "Half & Half", "Milk", "A Coke"],
+            correctAnswer: 1,
             images: ["/assets/images/check.jpg", "/assets/images/whiteRussian.jpg"]
         },
         question4 = {
@@ -115,7 +115,7 @@ $(document).ready(function () {
         secondImage.show();
         secondText.show();
         startButton.show();
-        startButton.html("Next question.");
+        startButton.html("Continue");
 
         if (totalQuestions < 10) {
             secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>The next question will begin in 7 seconds or press continue.");
@@ -156,7 +156,7 @@ $(document).ready(function () {
                 timer.html(time);
                 clearInterval(decrement);
                 clearTimeout(outOfTime);
-                secondText.html("Good job! Perfect game!");
+                secondText.html("Wow! Perfect game! You are a colossal Big Lebowski fan! Go and watch it one more time, you deserve it.");
                 startButton.show();
                 startButton.html("Play again?");
                 secondImage.attr("src", "/assets/images/bigdude.png");
@@ -168,7 +168,7 @@ $(document).ready(function () {
                 timer.html(time);
                 clearInterval(decrement);
                 clearTimeout(outOfTime);
-                secondText.html("Good job, but not perfect. You answered " + score + " out of 10 right.");
+                secondText.html("Good job, but not perfect. You answered " + score + " out of 10 right. Better go watch it one more time.");
                 startButton.show();
                 startButton.html("Try again?");
                 secondImage.attr("src", "/assets/images/bigdude.png");
@@ -192,9 +192,9 @@ $(document).ready(function () {
         secondImage.show();
         secondText.show();
         startButton.show();
-        startButton.html("Next question.");
+        startButton.html("Continue");
 
-        if (totalQuestions < 10) {
+        if (totalQuestions < 9) {
             secondText.html("Good job! You got the answer right. You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right! <br><br>The next question will begin in 7 seconds or press continue.");
         }
         else {
@@ -216,9 +216,9 @@ $(document).ready(function () {
         secondImage.show();
         secondText.show();
         startButton.show();
-        startButton.html("Next question.");
+        startButton.html("Continue");
 
-        if (totalQuestions < 10) {
+        if (totalQuestions < 9) {
             secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>The next question will begin in 7 seconds or press continue.");
         }
         else {
@@ -232,7 +232,7 @@ $(document).ready(function () {
         totalQuestions = -1;
     }
 
-    //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
+    //A start button function that on the first screen says start and changes to Next Question once you've answered at least 1 question.
     startButton.click(function () {
         waitTime();
     });
