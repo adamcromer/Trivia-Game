@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //Create objects which includes the questions, answers in an array, and the correct index number of the right answer.
+    //Create an array full of objects which includes the questions, answers in an array, the correct index number of the right answer, and image links.
     var questionObject = [
 
         question1 = {
@@ -13,13 +13,13 @@ $(document).ready(function () {
             question: "What body part can Walter get you by 3PM?",
             answers: ["A Toe", "A Finger", "A Head", "An Eye"],
             correctAnswer: 0,
-            images: ["/assets/images/diner.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["/assets/images/diner.jpg", "/assets/images/bunny.jpg"]
         },
         question3 = {
             question: "What is The Dude buying at the start of the movie with a check for $0.69?",
             answers: ["Coffee", "Milk", "Half & Half", "A Coke"],
             correctAnswer: 2,
-            images: ["/assets/images/whiterussian.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["/assets/images/check.jpg", "/assets/images/whiteRussian.jpg"]
         },
         question4 = {
             question: "What word is said the most throughout the film?",
@@ -82,13 +82,13 @@ $(document).ready(function () {
     //Variables for score and how many out of questions so far and other global variables.
     var score = 0;
     var totalQuestions = -1;
-    var time = 30;
+    var time = 15;
     let outOfTime;
     let decrement;
 
     //A function that updates the variables with the matching HTML.
     function updatePage() {
-        time = 30;
+        time = 15;
         timer.html(time);
         question.html(questionObject[totalQuestions].question);
         answer1.html(questionObject[totalQuestions].answers[0]);
@@ -162,7 +162,7 @@ $(document).ready(function () {
         if (totalQuestions < 9) {
             clearInterval(decrement);
             clearTimeout(outOfTime);
-            outOfTime = setTimeout(startTimeout, 1000 * 30);
+            outOfTime = setTimeout(startTimeout, 1000 * 15);
             decrement = setInterval(startTimer, 1000);
             startButton.hide();
             secondImage.hide();
@@ -179,12 +179,14 @@ $(document).ready(function () {
             if (score === 10) {
                 secondText.html("Good job! Perfect game!");
                 startButton.html("Play again?");
+                secondImage.attr("src", "/assets/images/bigdude.png");
                 reset();
             }
 
             else {
                 secondText.html("Good job, but not perfect.");
                 startButton.html("Try again?");
+                secondImage.attr("src", "/assets/images/bigdude.png");
                 reset();
             }
         }
