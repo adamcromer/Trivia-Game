@@ -25,7 +25,7 @@ $(document).ready(function () {
             question: "What word is said the most throughout the film?",
             answers: ["Dude", "Man", "The F Word", "Bowling"],
             correctAnswer: 2,
-            images: ["/assets/images/thejesus.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["/assets/images/thejesus.jpg", "/assets/images/dudewaltdonnie.jpg"]
         },
         question5 = {
             question: "What band does The Dude hate?",
@@ -37,19 +37,19 @@ $(document).ready(function () {
             question: "What is a nihilist?",
             answers: ["A person who believes that life is meaningless", "A person who disbelieves the existence of God", "A person who believes that nothing is known or can be known of the existence of God", "A person who believes in multiple Gods"],
             correctAnswer: 0,
-            images: ["/assets/images/nihilists.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["/assets/images/nihilists.jpg", "/assets/images/thedudeatbar.jpg"]
         },
         question7 = {
             question: "Who is present in every scene?",
             answers: ["Walter", "Bunny", "Donnie", "The Dude"],
             correctAnswer: 3,
-            images: ["/assets/images/bunny.jpg", "/assets/images/brandt.jpg"]
+            images: ["/assets/images/thedudeandwalt.jpg", "/assets/images/brandt.jpg"]
         },
         question8 = {
             question: "Why can't Walter answer his phone?",
             answers: ["He's observing Shabbos", "He's in PTSD therapy", "He forgot to pay his phone bill", "He doesn't use a phone because he believes he's being tracked by the CIA"],
             correctAnswer: 0,
-            images: ["/assets/images/angrywalt.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["/assets/images/angrywalt.jpg", "/assets/images/thedudebowling.jpg"]
         },
         question9 = {
             question: "Jackie Treehorn treats objects like what according to The Dude?",
@@ -61,7 +61,7 @@ $(document).ready(function () {
             question: "Who is The Big Lebowski?",
             answers: ['Jeffrey "The Dude" Lebowski', "Bunny Lebowski", "Maude Lebowski", 'Jeffrey "The Millionaire" Lebowski'],
             correctAnswer: 3,
-            images: ["/assets/images/thedudeatbar.jpg", "/assets/images/brandtandthebig.jpg"]
+            images: ["/assets/images/maude.jpg", "/assets/images/brandtandthebig.jpg"]
         }
     ]
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
             }
 
             else {
-                secondText.html("Good job, but not perfect.");
+                secondText.html("Good job, but not perfect. You answered " + score + " out of 10 right.");
                 startButton.html("Try again?");
                 secondImage.attr("src", "/assets/images/bigdude.png");
                 reset();
