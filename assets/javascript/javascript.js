@@ -7,61 +7,61 @@ $(document).ready(function () {
             question: "What really tied the room together?",
             answers: ["A Sofa", "A Rug", "A Painting", "An Antique Rocking Chair"],
             correctAnswer: 1,
-            images: ["assets/images/thedudetoilet.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["assets/images/thedudetoilet.jpg", "assets/images/thedudeonrug.jpg"]
         },
         question2 = {
             question: "What body part can Walter get you by 3PM?",
             answers: ["A Toe", "A Finger", "A Head", "An Eye"],
             correctAnswer: 0,
-            images: ["/assets/images/diner.jpg", "/assets/images/bunny.jpg"]
+            images: ["assets/images/diner.jpg", "assets/images/bunny.jpg"]
         },
         question3 = {
             question: "What is The Dude buying at the start of the movie with a check for $0.69?",
             answers: ["Coffee", "Half & Half", "Milk", "A Coke"],
             correctAnswer: 1,
-            images: ["/assets/images/check.jpg", "/assets/images/whiteRussian.jpg"]
+            images: ["assets/images/check.jpg", "assets/images/whiteRussian.jpg"]
         },
         question4 = {
             question: "What word is said the most throughout the film?",
             answers: ["Dude", "Man", "The F Word", "Bowling"],
             correctAnswer: 2,
-            images: ["/assets/images/thejesus.jpg", "/assets/images/dudewaltdonnie.jpg"]
+            images: ["assets/images/thejesus.jpg", "assets/images/dudewaltdonnie.jpg"]
         },
         question5 = {
             question: "What band does The Dude hate?",
             answers: ["The Beatles", "Fleetwood Mac", "The Eagles", "The Bangles"],
             correctAnswer: 2,
-            images: ["/assets/images/ihatethe.jpg", "/assets/images/headphones.jpg"]
+            images: ["assets/images/ihatethe.jpg", "assets/images/headphones.jpg"]
         },
         question6 = {
             question: "What is a nihilist?",
             answers: ["A person who believes that life is meaningless", "A person who disbelieves the existence of God", "A person who believes that nothing is known or can be known of the existence of God", "A person who believes in multiple Gods"],
             correctAnswer: 0,
-            images: ["/assets/images/nihilists.jpg", "/assets/images/thedudeatbar.jpg"]
+            images: ["assets/images/nihilists.jpg", "assets/images/thedudeatbar.jpg"]
         },
         question7 = {
             question: "Who is present in every scene?",
             answers: ["Walter", "Bunny", "Donnie", "The Dude"],
             correctAnswer: 3,
-            images: ["/assets/images/thedudeandwalt.jpg", "/assets/images/brandt.jpg"]
+            images: ["assets/images/thedudeandwalt.jpg", "assets/images/brandt.jpg"]
         },
         question8 = {
             question: "Why can't Walter answer his phone?",
             answers: ["He's observing Shabbos", "He's in PTSD therapy", "He forgot to pay his phone bill", "He doesn't use a phone because he believes he's being tracked by the CIA"],
             correctAnswer: 0,
-            images: ["/assets/images/angrywalt.jpg", "/assets/images/thedudebowling.jpg"]
+            images: ["assets/images/angrywalt.jpg", "assets/images/thedudebowling.jpg"]
         },
         question9 = {
             question: "Jackie Treehorn treats objects like what according to The Dude?",
             answers: ["Books", "Dogs", "Food", "Women"],
             correctAnswer: 3,
-            images: ["/assets/images/dream.jpg", "/assets/images/theduderelaxing.jpg"]
+            images: ["assets/images/dream.jpg", "assets/images/theduderelaxing.jpg"]
         },
         question10 = {
             question: "Who is The Big Lebowski?",
             answers: ['Jeffrey "The Dude" Lebowski', "Bunny Lebowski", "Maude Lebowski", 'Jeffrey "The Millionaire" Lebowski'],
             correctAnswer: 3,
-            images: ["/assets/images/maude.jpg", "/assets/images/brandtandthebig.jpg"]
+            images: ["assets/images/maude.jpg", "assets/images/brandtandthebig.jpg"]
         }
     ]
 
