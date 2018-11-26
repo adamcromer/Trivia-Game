@@ -7,7 +7,7 @@ $(document).ready(function () {
             question: "What really tied the room together?",
             answers: ["A Sofa", "A Rug", "A Painting", "An Antique Rocking Chair"],
             correctAnswer: 1,
-            images: ["/assets/images/thedudetoilet.jpg", "/assets/images/thedudeonrug.jpg"]
+            images: ["assets/images/thedudetoilet.jpg", "/assets/images/thedudeonrug.jpg"]
         },
         question2 = {
             question: "What body part can Walter get you by 3PM?",
