@@ -19,7 +19,7 @@ $(document).ready(function () {
             question: "What is The Dude buying at the start of the movie with a check for $0.69?",
             answers: ["Coffee", "Half & Half", "Milk", "A Coke"],
             correctAnswer: 1,
-            images: ["assets/images/check.jpg", "assets/images/whiteRussian.jpg"]
+            images: ["assets/images/check.jpg", "assets/images/whiterussian.jpg"]
         },
         question4 = {
             question: "What word is said the most throughout the film?",
