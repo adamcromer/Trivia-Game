@@ -103,10 +103,10 @@ $(document).ready(function () {
 
     //A setTimeout function for what happens once the time runs out.
     function startTimeout() {
-        time = 5;
+        time = 7;
         clearInterval(decrement);
         clearTimeout(outOfTime);
-        outOfTime = setTimeout(waitTime, 1000 * 5);
+        outOfTime = setTimeout(waitTime, 1000 * 7);
         decrement = setInterval(startTimer, 1000);
         timer.html(time);
         question.hide();
@@ -114,8 +114,15 @@ $(document).ready(function () {
         mainImage.hide();
         secondImage.show();
         secondText.show();
-        secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>You have 5 seconds until the next question.");
+        startButton.show();
+        startButton.html("Next question.");
 
+        if (totalQuestions < 10) {
+            secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>The next question will begin in 7 seconds or press continue.");
+        }
+        else {
+            secondText.html("You ran out of time! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". <br><br>The next question will begin in 7 seconds or press continue.");
+        }
     }
 
     //A setInterval function that counts down the timer.
@@ -172,7 +179,7 @@ $(document).ready(function () {
 
     //A function for what happens once your select the right answer.
     function rightAnswer() {
-        time = 5;
+        time = 7;
         timer.html(time);
         clearInterval(decrement);
         clearTimeout(outOfTime);
@@ -184,23 +191,39 @@ $(document).ready(function () {
         mainImage.hide();
         secondImage.show();
         secondText.show();
-        secondText.html("Good job! You got the answer right. You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right! <br><br>You have 5 seconds until the next question.");
+        startButton.show();
+        startButton.html("Next question.");
+
+        if (totalQuestions < 10) {
+            secondText.html("Good job! You got the answer right. You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right! <br><br>The next question will begin in 7 seconds or press continue.");
+        }
+        else {
+            secondText.html("Good job! You got the answer right. <br><br>You will see the final score in 5 seconds or press continue.");
+        }
     }
 
     //A function for what happens once your seletct the wrong answer.
     function wrongAnswer() {
-        time = 5;
+        time = 7;
         timer.html(time);
         clearInterval(decrement);
         clearTimeout(outOfTime);
-        outOfTime = setTimeout(waitTime, 1000 * 5);
+        outOfTime = setTimeout(waitTime, 1000 * 7);
         decrement = setInterval(startTimer, 1000);
         question.hide();
         answers.hide();
         mainImage.hide();
         secondImage.show();
         secondText.show();
-        secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>You have 5 seconds until the next question.");
+        startButton.show();
+        startButton.html("Next question.");
+
+        if (totalQuestions < 10) {
+            secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right. <br><br>The next question will begin in 7 seconds or press continue.");
+        }
+        else {
+            secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". <br><br>You will see the final score in 7 seconds or press continue.")
+        }
     }
 
     //A reset function so that you don't have to restart the page to play again.
