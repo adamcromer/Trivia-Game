@@ -35,7 +35,7 @@ $(document).ready(function () {
         },
         question6 = {
             question: "What is a nihilist?",
-            answers: ["A person who believes that life is meaningless.", "A person who disbelieves the existence of God.", "A person who believes that nothing is known or can be known of the existence of God.", "A person who believes in multiple Gods."],
+            answers: ["A person who believes that life is meaningless", "A person who disbelieves the existence of God", "A person who believes that nothing is known or can be known of the existence of God", "A person who believes in multiple Gods"],
             correctAnswer: 0,
             images: ["/assets/images/nihilists.jpg", "/assets/images/thedudeonrug.jpg"]
         },
@@ -47,7 +47,7 @@ $(document).ready(function () {
         },
         question8 = {
             question: "Why can't Walter answer his phone?",
-            answers: ["He's observing Shabbos.", "He's in PTSD therapy.", "He forgot to pay his phone bill.", "He doesn't use a phone because he believes he's being tracked by the CIA."],
+            answers: ["He's observing Shabbos", "He's in PTSD therapy", "He forgot to pay his phone bill", "He doesn't use a phone because he believes he's being tracked by the CIA"],
             correctAnswer: 0,
             images: ["/assets/images/angrywalt.jpg", "/assets/images/thedudeonrug.jpg"]
         },
@@ -82,9 +82,14 @@ $(document).ready(function () {
     //Variables for score and how many out of questions so far and other global variables.
     var score = 0;
     var totalQuestions = -1;
+    var time = 30;
+    let outOfTime;
+    let decrement;
 
     //A function that updates the variables with the matching HTML.
     function updatePage() {
+        time = 30;
+        timer.html(time);
         question.html(questionObject[totalQuestions].question);
         answer1.html(questionObject[totalQuestions].answers[0]);
         answer2.html(questionObject[totalQuestions].answers[1]);
@@ -95,9 +100,11 @@ $(document).ready(function () {
         secondImage.attr("src", questionObject[totalQuestions].images[1]);
     }
 
-    //A function for what happens once the time runs out.
-    function outOfTime() {
-
+    //A setTimeout function for what happens once the time runs out.
+    function startTimeout() {
+        clearInterval(decrement);
+        time = 0;
+        timer.html(time);
         question.hide();
         answers.hide();
         mainImage.hide();
@@ -108,10 +115,16 @@ $(document).ready(function () {
         startButton.html("Continue");
     }
 
+    //A setInterval function that counts down the timer.
+    function startTimer() {
+        time--;
+        timer.html(time);
+    }
+
     //A function for what happens once your select the right answer.
     function rightAnswer() {
+        clearInterval(decrement);
         clearTimeout(outOfTime);
-        console.log("clearedTimeout");
         score++;
         question.hide();
         answers.hide();
@@ -122,9 +135,11 @@ $(document).ready(function () {
         startButton.html("Continue");
         secondText.html("Good job! You got the answer right. You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right!");
     }
+
     //A function for what happens once your seletct the wrong answer.
     function wrongAnswer() {
-        
+        clearInterval(decrement);
+        clearTimeout(outOfTime);
         question.hide();
         answers.hide();
         mainImage.hide();
@@ -133,7 +148,6 @@ $(document).ready(function () {
         startButton.show();
         startButton.html("Continue");
         secondText.html("Sorry, you picked the wrong answer! The correct answer was " + questionObject[totalQuestions].answers[questionObject[totalQuestions].correctAnswer] + ". You have currently answered " + score + " out of " + (totalQuestions + 1) + " questions right.");
-        console.log(totalQuestions);
     }
 
     //A reset function so that you don't have to restart the page to play again.
@@ -141,14 +155,15 @@ $(document).ready(function () {
         score = 0;
         totalQuestions = -1;
     }
-    console.log(totalQuestions);//?
 
     //A start button function that on the first screen says start and changes to continue once you've answered at least 1 question.
     startButton.click(function () {
 
         if (totalQuestions < 9) {
-            setTimeout(outOfTime, 1000 * 30);
-            console.log("settimeout");
+            clearInterval(decrement);
+            clearTimeout(outOfTime);
+            outOfTime = setTimeout(startTimeout, 1000 * 30);
+            decrement = setInterval(startTimer, 1000);
             startButton.hide();
             secondImage.hide();
             secondText.hide();
@@ -160,9 +175,18 @@ $(document).ready(function () {
             updatePage();
         }
         else {
-            secondText.html("Blah blah blah play again?");
-            startButton.html("Restart");
-            reset();
+
+            if (score === 10) {
+                secondText.html("Good job! Perfect game!");
+                startButton.html("Play again?");
+                reset();
+            }
+
+            else {
+                secondText.html("Good job, but not perfect.");
+                startButton.html("Try again?");
+                reset();
+            }
         }
     });
 
@@ -173,8 +197,6 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
-        clearTimeout(outOfTime);
-        console.log("clearedTimeout");
     })
 
     answer2.click(function () {
@@ -184,8 +206,6 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
-        clearTimeout(outOfTime);
-        console.log("clearedTimeout");
     })
 
     answer3.click(function () {
@@ -195,8 +215,6 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
-        clearTimeout(outOfTime);
-        console.log("clearedTimeout");
     })
 
     answer4.click(function () {
@@ -206,9 +224,6 @@ $(document).ready(function () {
         else {
             wrongAnswer();
         }
-        clearTimeout(outOfTime);
-        console.log("clearedTimeout");
     })
-
 
 });
