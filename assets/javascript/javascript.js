@@ -159,7 +159,7 @@ $(document).ready(function () {
                 secondText.html("Wow! Perfect game! You are a colossal Big Lebowski fan! Go and watch it one more time, you deserve it.");
                 startButton.show();
                 startButton.html("Play again?");
-                secondImage.attr("src", "/assets/images/bigdude.png");
+                secondImage.attr("src", "assets/images/bigdude.png");
                 reset();
             }
 
@@ -171,7 +171,7 @@ $(document).ready(function () {
                 secondText.html("Good job, but not perfect. You answered " + score + " out of 10 right. Better go watch it one more time.");
                 startButton.show();
                 startButton.html("Try again?");
-                secondImage.attr("src", "/assets/images/bigdude.png");
+                secondImage.attr("src", "assets/images/bigdude.png");
                 reset();
             }
         }
