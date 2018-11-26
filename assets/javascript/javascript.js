@@ -53,7 +53,7 @@ $(document).ready(function () {
         },
         question9 = {
             question: "Jackie Treehorn treats objects like what according to The Dude?",
-            answers: ["Books", "Dogs", "Food", "Women"],
+            answers: ["Books", "Dogs", "Trash", "Women"],
             correctAnswer: 3,
             images: ["assets/images/dream.jpg", "assets/images/theduderelaxing.jpg"]
         },
