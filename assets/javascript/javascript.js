@@ -255,8 +255,6 @@ $(document).ready(function () {
         }
     })
 
-    console.log(questionObject[1].answers)
-
     answer3.click(function () {
         if (questionObject[totalQuestions].correctAnswer === 2) {
             rightAnswer();
